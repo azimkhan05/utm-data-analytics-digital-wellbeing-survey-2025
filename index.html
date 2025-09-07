@@ -103,8 +103,7 @@
 
     .form-card .banner img {
       width: 100%;
-      height: auto;
-      max-height: 400px;  /* keeps it at 1600x400 scale */
+      max-height: 180px;
       object-fit: cover;
       display: block;
     }
@@ -118,7 +117,7 @@
     iframe {
       border: none;
       width: 100%;
-      min-height: 80vh;
+      min-height: 80vh; /* take 80% of screen height */
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(56,189,248,0.3);
     }
@@ -136,10 +135,7 @@
       h2 { font-size: 1rem; }
       .container { padding: 10px; }
       .form-card { padding: 10px; }
-      iframe { min-height: 100vh; }
-      .form-card .banner img {
-        max-height: 200px; /* smaller banner on mobile */
-      }
+      iframe { min-height: 100vh; } /* full screen form on mobile */
     }
 
   </style>
