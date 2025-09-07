@@ -93,20 +93,21 @@
     }
 
     /* Banner */
-    .banner-container {
-  width: 100%;
-  text-align: center;
-  margin-bottom: 1rem;
-}
+    .form-card .banner {
+      width: 100%;
+      margin-bottom: 12px;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 0 15px rgba(34,197,94,0.4);
+    }
 
-.survey-banner {
-  width: 100%;
-  max-width: 600px; /* keeps it from being too large on big screens */
-  height: auto;
-  border-radius: 12px; /* optional rounded corners */
-  box-shadow: 0 0 20px rgba(0, 255, 255, 0.6); /* glowing cyberpunk effect */
-}
-
+    .form-card .banner img {
+      width: 100%;
+      height: auto;
+      max-height: 400px;  /* keeps it at 1600x400 scale */
+      object-fit: cover;
+      display: block;
+    }
 
     /* Glow animation */
     @keyframes glowPulse {
@@ -117,7 +118,7 @@
     iframe {
       border: none;
       width: 100%;
-      min-height: 80vh; /* take 80% of screen height */
+      min-height: 80vh;
       border-radius: 10px;
       box-shadow: 0 0 10px rgba(56,189,248,0.3);
     }
@@ -135,7 +136,10 @@
       h2 { font-size: 1rem; }
       .container { padding: 10px; }
       .form-card { padding: 10px; }
-      iframe { min-height: 100vh; } /* full screen form on mobile */
+      iframe { min-height: 100vh; }
+      .form-card .banner img {
+        max-height: 200px; /* smaller banner on mobile */
+      }
     }
 
   </style>
@@ -157,10 +161,9 @@
 
     <!-- Survey Form with Banner -->
     <div class="form-card">
-      <div class="banner-container">
-		<img src="BANNER.gif" alt="Survey Banner" class="survey-banner">
-	  </div>
-
+      <div class="banner">
+        <img src="BANNER.gif" alt="Survey Banner">
+      </div>
 
       <iframe src="https://docs.google.com/forms/d/e/1FAIpQLScm9M-OdJkF83e8UQwQQLeeFYOtD2ZaTXlcdPhfi3cfQeKr9Q/viewform?embedded=true">
         Loading…
