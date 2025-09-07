@@ -80,12 +80,13 @@
     }
 
     /* Logo */
-    .logo {
-      margin-bottom: 20px;
-    }
-    .logo img {
-      max-width: 260px;
-    }
+	.logo {
+	margin-bottom: 20px;
+	}
+	.logo img {
+	max-width: 700px;  /* Desktop size */
+	width: 100%;
+	}
 
     /* Card */
     .form-card {
@@ -143,16 +144,21 @@
     }
 
     /* 🔹 Responsive Fix for Mobile */
-    @media (max-width: 768px) {
-      h1 { font-size: 1.6rem; }
-      h2 { font-size: 0.95rem; }
-      .container { padding: 10px; }
-      .form-card { padding: 10px; }
-      iframe { min-height: 100vh; }
-      .form-card .banner img {
-        max-height: 100px; /* smaller banner on mobile */
-      }
-    }
+		@media (max-width: 768px) {
+		h1 { font-size: 1.6rem; }
+		h2 { font-size: 0.95rem; }
+		.container { padding: 10px; }
+		.form-card { padding: 10px; }
+		iframe { min-height: 100vh; }
+
+		.logo img {
+		max-width: 350px; /* Mobile size */
+	}
+
+		.form-card .banner img {
+		max-height: 100px; /* smaller banner on mobile */
+	}
+}
 
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600&display=swap" rel="stylesheet">
